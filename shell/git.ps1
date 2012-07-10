@@ -27,3 +27,15 @@ function gdeploy {
 	git push origin $TargetBranch
 	git checkout $CurrentBranch
 }
+
+function github {
+	$origin = git config --get remote.origin.url
+	Write-Host $origin
+	if ($origin -match "git@github.com:(.+)/(.+)") {
+		$url = $origin -replace "git@github.com:(.+)/(.+).git", 'http://github.com/$1/$2'
+	} else {
+		$url = $origin
+	}
+	Write-Host $url
+	start $url
+}
