@@ -15,7 +15,7 @@ function gpo {
 }
 
 function glog {
-	git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	git log --format='%Cgreen%h%Creset %C(cyan)%an%Creset - %s %Cgreen(%cr)%Creset' --graph --date=relative
 }
 
 function gdeploy {

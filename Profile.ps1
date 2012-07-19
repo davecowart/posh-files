@@ -9,4 +9,4 @@ function ep {
 . "$Env:userprofile\Dropbox\Symlinked\shell\git.ps1"
 
 # Load project finder
-# . "$Env:userprofile\Dropbox\Symlinked\shell\project_finder.ps1"
+. "$Env:userprofile\Dropbox\Symlinked\shell\project_finder.ps1"

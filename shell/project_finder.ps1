@@ -1,3 +1,12 @@
+function po {
+	if(test-path D:\Projects) {
+		$ProjectsDir = "D:\Projects"
+	} else {
+		$ProjectsDir = "C:\Projects"
+	}
+	cd $ProjectsDir
+}
+
 function gt {
 	param([string]$Name)
 	$ProjectsDir = ""
