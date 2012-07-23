@@ -1,4 +1,8 @@
 function gs {
+	git status -s
+}
+
+function gst {
 	git status
 }
 
