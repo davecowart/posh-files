@@ -32,6 +32,28 @@ function gdeploy {
 	git checkout $CurrentBranch
 }
 
+function dqa {
+	git fetch origin
+	git checkout master
+	git pull origin master
+	git checkout qa
+	git pull origin qa
+	git merge master
+	git push origin qa
+	git checkout master
+}
+
+function duat {
+	git fetch origin
+	git checkout master
+	git pull origin master
+	git checkout uat
+	git pull origin uat
+	git merge master
+	git push origin uat
+	git checkout master
+}
+
 function github {
 	$origin = git config --get remote.origin.url
 	if ($origin -match "git@github.com:(.+)/(.+)") {
