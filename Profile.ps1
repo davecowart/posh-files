@@ -10,3 +10,6 @@ function ep {
 
 # Load project finder
 . "$Env:userprofile\Dropbox\Symlinked\shell\project_finder.ps1"
+
+# Load file manipulation
+. "$Env:userprofile\Dropbox\Symlinked\shell\files.ps1"
