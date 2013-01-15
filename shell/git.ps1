@@ -18,18 +18,12 @@ function gpo {
 	git push origin
 }
 
-function glog {
-	git log --format='%Cgreen%h%Creset %C(cyan)%an%Creset - %s %Cgreen(%cr)%Creset' --graph --date=relative
+function gb {
+	git branch
 }
 
-function gdeploy {
-	param([string]$TargetBranch)
-	$CurrentBranch = git symbolic-ref HEAD
-	$CurrentBranch = $CurrentBranch.split('/')[-1]
-	git checkout $TargetBranch
-	git merge $CurrentBranch
-	git push origin $TargetBranch
-	git checkout $CurrentBranch
+function glog {
+	git log --format='%Cgreen%h%Creset %C(cyan)%an%Creset - %s %Cgreen(%cr)%Creset' --graph --date=relative
 }
 
 function dqa {
@@ -52,6 +46,12 @@ function duat {
 	git merge master
 	git push origin uat
 	git checkout master
+}
+
+function gdeploy {
+	gpo
+	dqa
+	duat
 }
 
 function github {
