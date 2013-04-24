@@ -18,6 +18,10 @@ function gpo {
 	git push origin
 }
 
+function gtfo {
+  git fetch origin
+}
+
 function gb {
 	git branch
 }
